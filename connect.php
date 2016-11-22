@@ -19,7 +19,7 @@ if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
        
         echo "Item Name and Color: " . $row["Item_Name"]. " " . $row["Color"]. "<br>";
-        echo "Quanity: " . $row["Quanity"]. "<br>";
+        echo "Quantity: " . $row["Quantity"]. "<br>";
         echo "Aisle Location: " . $row["Aisle_Location"]."<br><hr>";
     }
 } else {

@@ -15,15 +15,15 @@ if (!$conn) {
   // Connect to MySQL
  				$mysqli = new mysqli( $servername, $username, $password, $dbname );
 
-               $ItemName = (isset($_POST['ItemName'])    ? $_POST['ItemName']   : '');
+               $ItemName = (isset($_POST['Item_Name'])    ? $_POST['Item_Name']   : '');
                $Quantity = (isset($_POST['Quantity'])    ? $_POST['Quantity']   : '');
                $Color = (isset($_POST['Color'])    ? $_POST['Color']   : '');
-               $Location = (isset($_POST['Location'])    ? $_POST['Location']   : '');
+               $Location = (isset($_POST['Aisle_Location'])    ? $_POST['Aisle_Location']   : '');
 
 
 
 			  // Insert our data
-			  $sql = "INSERT INTO inventory_table ( Item_Name, Quantity, Color, Location) 	VALUES ( '{$mysqli->real_escape_string(isset($_POST['ItemName'])    ? $_POST['ItemName']   : '')}' , '{$mysqli->real_escape_string(isset($_POST['Quantity'])    ? $_POST['Quantity']   : '')}'	, '{$mysqli->real_escape_string(isset($_POST['Color'])    ? $_POST['Color']   : '')}' 	, '{$mysqli->real_escape_string(isset($_POST['Location'])    ? $_POST['Location']   : '')}'	)";
+			  $sql = "INSERT INTO inventory_table ( Item_Name, Quantity, Color, Aisle_Location) 	VALUES ( '{$mysqli->real_escape_string(isset($_POST['Item_Name'])    ? $_POST['Item_Name']   : '')}' , '{$mysqli->real_escape_string(isset($_POST['Quantity'])    ? $_POST['Quantity']   : '')}'	, '{$mysqli->real_escape_string(isset($_POST['Color'])    ? $_POST['Color']   : '')}' 	, '{$mysqli->real_escape_string(isset($_POST['Aisle_Location'])    ? $_POST['Aisle_Location']   : '')}'	)";
 
 
 			  $insert = $mysqli->query($sql);

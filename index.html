@@ -70,22 +70,22 @@
 
                      <tr>
                         <td width="100">Item Name</td>
-                        <td><input name="fname" type="text" id="ItemName"></td>
+                        <td><input name="Item_Name" type="text" id="Item_Name"></td>
                      </tr>
 
 
                      <tr>
                         <td width="100">Quantity</td>
-                        <td><input name="lname" type="text" id="Quantity"></td>
+                        <td><input name="Quantity" type="text" id="Quantity"></td>
                      </tr>
                      <tr>
                         <td width="100">Color</td>
-                        <td><input name="email" type="text" id="Color"></td>
+                        <td><input name="Color" type="text" id="Color"></td>
                      </tr>
 
                      <tr>
                         <td width="100">Aisle Location</td>
-                        <td><input name="comments" type="text" id="Location"></td>
+                        <td><input name="Aisle_Location" type="text" id="Aisle_Location"></td>
                      </tr>
 
                      <tr>
@@ -175,11 +175,41 @@
 	<div data-role="content">	
 	  <h3>Please Submit Your Information</h3>	
 	  <p> You will be contacted shortly by our Student Advisors</p>
-      <form>
-     <h5> 	Name: <input type="text">
-     		Email : <input type="email">
-     		Phone: <input type="number"> 
-            Commnets: <input type="text">        
+      
+ 
+		               <form method="post" action="feedback.php">
+                  <table width="400" border="0" cellspacing="1" cellpadding="2">
+
+                     <tr>
+                        <td width="100">Name:</td>
+                        <td><input name="Name" type="text" id="Name"></td>
+                     </tr>
+
+
+                     <tr>
+                        <td width="100">Email:</td>
+                        <td><input name="Email" type="text" id="Email"></td>
+                     </tr>
+                     <tr>
+                        <td width="100">Feedback</td>
+                        <td><input name="Feedback" type="text" id="Feedback"></td>
+                     </tr>
+
+
+                     <tr>
+                        <td width="100"> </td>
+                        <td> </td>
+                     </tr>
+
+                     <tr>
+                        <td width="100"> </td>
+                        <td>
+                          <input action="#Feedback_Confirm" name="add" type="submit" id="add" value="Submit Feedback">
+                        </td>
+                     </tr>
+
+                  </table>
+               </form>       
     <a href="#Feedback_Confirm" data-role="button" data-transition="fade" data-icon="back">Submit</a>
      </form>
       </div>
