@@ -11,23 +11,24 @@
 
 <!--Main Page -->
 <div data-role="page" id="pageone"  data-theme="b">
-  <div data-role="panel" id="myPanel">
+
+	
+	<div data-role="panel" id="myPanel">
     <h2>Main Navigation</h2>
    
   
-<div data-role="footer">
 <!-- My panel -->
  <div data-role="listview">
   <ul>
    <li><a href="#myPanel">Home</a></li>
    <li><a href="#Receive">Receive Form</a></li>
-   <li><a href="#Stock Search">Search Form</a></li>
+   <li><a href="#Stock_Search">Search Form</a></li>
    <li><a href="#Feedback">Feedback Form</a></li>
    <li><a href="#Reports">Inventory Reports</a></li>
   </ul>
  </div>
 </div>
-</div>
+	
 
 
 
@@ -102,18 +103,13 @@
 
                   </table>
                </form>
-	</div>
+
 <!-- End Receive Form -->
-<a href="#Receive_Confirm" data-role="button" data-transition="flow" data-icon="back">Submit</a>     
-      </form>
-	  
+<!-- <a href="#Receive_Confirm" data-role="button" data-transition="flow" data-icon="back">Submit</a>      -->
       
- 
-      
-	</div>
-	<div data-role="footer" data-theme="b">
-	  <h4>Zvrubliauskas &copy; 2016 </h4>
-	</div>
+								<div data-role="footer" data-theme="b">
+									<h4>Zvrubliauskas &copy; 2016 </h4>
+								</div>
 </div>
 
 
@@ -133,20 +129,24 @@
 
 
 <!-- Stock Search Page  -->
-<div id="Stock Search" data-role="page" data-theme="b">
-	<div data-role="header" data-theme="b">
-		<h1>Search</h1><a href="#pageone" data-role="button" data-transition="fade" data-icon="back">Back</a> 
-	</div>
-	<div data-role="content">	
-	  <h3>Searches all of the database for products that have been entered. </h3>	
-	 <form>
-   
-         <a href="search.php" data-role="button" data-transition="fade" action="search.php" data-icon="search">Search</a>
-     </form>
-      </div>
+<div id="Stock_Search" data-role="page" data-theme="b">
+	
+				<div data-role="header" data-theme="b">
+					<h1>Search</h1><a href="#pageone" data-role="button" data-transition="fade" data-icon="back">Back</a> 
+				</div>
+	
+	
+				<div data-role="content">	
+					<h3>Searches all of the database for products that have been entered. </h3>	
+
+					
+							 <a href="search.php" data-role="button" data-transition="fade" data-icon="search">Search</a>
+
+				</div>
 	<div data-role="footer" data-theme="b">
 	  <h4>Zvrubliauskas &copy; 2016</h4>
 	</div>
+	
 </div>
 
 
@@ -164,7 +164,7 @@
 	<div data-role="footer" data-theme="b">
 	  <h4>Zvrubliauskas &copy; 2016</h4>
 	</div>
-</div>
+		</div>
 
 
 <!-- Feedback Page  -->
