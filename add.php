@@ -1,3 +1,4 @@
+
 <?php
 $servername = "us-cdbr-azure-central-a.cloudapp.net";
 $username = "bd731ce7cc045b";
@@ -29,11 +30,7 @@ if (!$conn) {
 			  $insert = $mysqli->query($sql);
 
 			  // Print response from MySQL
-			  if ( $insert ) {
-				echo "Success! Row ID: {$mysqli->insert_id}";
-			  } else {
-				die("Error: {$mysqli->errno} : {$mysqli->error}");
-			  }
+			header('Location: http://inventoryappzv1.azurewebsites.net/add_confirm.html');
 
 
             ?>

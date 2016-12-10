@@ -25,16 +25,19 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql= "SELECT Item_Name, Color, Quantity, Aisle_Location FROM inventory_table";
+$sql= "SELECT firmware_version.Firmware_Version, inventory_table.Item_Name 
+FROM firmware_version
+INNER JOIN inventory_table
+ON firmware_version.Item_Name=inventory_table.Item_Name;";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
        
-        echo "Item Name and Color: " . $row["Item_Name"]. " " . $row["Color"]. "<br>";
-        echo "Quanity: " . $row["Quanity"]. "<br>";
-        echo "Aisle Location: " . $row["Aisle_Location"]."<br><hr>";
+        echo "Item Name: " . $row["Item_Name"]. "<br>";
+        echo "Firmware Version: " . $row["Firmware_Version"]. "<br>";
+       
     }
 } else {
     echo "0 results";
