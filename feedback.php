@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+
+<div data-role="page" data-theme="b">
 <?php
 $servername = "us-cdbr-azure-central-a.cloudapp.net";
 $username = "bd731ce7cc045b";
@@ -40,3 +53,11 @@ if (!$conn) {
 
 
             ?>
+
+						  	<div data-role="footer" data-theme="b">
+	  <h4>Zvrubliauskas &copy; 2016</h4>
+	</div>
+</div>
+
+</body>
+</html>

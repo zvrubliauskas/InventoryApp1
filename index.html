@@ -6,50 +6,189 @@
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+         <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+<script>
+	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+
+	Notification.requestPermission(function (permission) {
+		// console.log(permission);
+	});
+
+	function show() {
+		window.setTimeout(function () {
+			var instance = new Notification(
+				"Message From Management", {
+					body: "Please remmeber to verify all inventory additions prior to closing out the day!"
+				}
+			);
+
+			instance.onclick = function () {
+				// Something to do
+			};
+			instance.onerror = function () {
+				// Something to do
+			};
+			instance.onshow = function () {
+				// Something to do
+			};
+			instance.onclose = function () {
+				// Something to do
+			};
+		}, 5000);
+
+		return false;
+	}
+</script>
+
+
+
+
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '915796271891214',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+ 
+ 
+
+
+      <script>
+         // trigger when button click
+         $('.alert').on('click', function(){
+         	toastr["error"]("Your error message here!");
+         });
+
+         toastr.options = {
+           "closeButton": true,
+           "debug": false,
+           "newestOnTop": false,
+           "progressBar": false,
+           "positionClass": "toast-top-right",
+           "preventDuplicates": false,
+           "onclick": null,
+           "showDuration": "300",
+           "hideDuration": "1000",
+           "timeOut": "5000",
+           "extendedTimeOut": "1000",
+           "showEasing": "swing",
+           "hideEasing": "linear",
+           "showMethod": "fadeIn",
+           "hideMethod": "fadeOut"
+         }
 </head>
 <body>
+  <script>
+	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
 
+	Notification.requestPermission(function (permission) {
+		// console.log(permission);
+	});
+
+	function show() {
+		window.setTimeout(function () {
+			var instance = new Notification(
+				"App Notification", {
+					body: "Do you like the application?"
+				}
+			);
+
+			instance.onclick = function () {
+				// Something to do
+			};
+			instance.onerror = function () {
+				// Something to do
+			};
+			instance.onshow = function () {
+				// Something to do
+			};
+			instance.onclose = function () {
+				// Something to do
+			};
+		}, 5000);
+	}
+</script>
+
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=915796271891214";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 <!--Main Page -->
 <div data-role="page" id="pageone"  data-theme="b">
-  <div data-role="panel" id="myPanel">
+<div>
+
+</div>
+	
+	<div data-role="panel" id="myPanel">
     <h2>Main Navigation</h2>
    
   
-<div data-role="footer">
 <!-- My panel -->
  <div data-role="listview">
   <ul>
    <li><a href="#myPanel">Home</a></li>
    <li><a href="#Receive">Receive Form</a></li>
-   <li><a href="#Stock Search">Search Form</a></li>
+   <li><a href="#Stock_Search">Search Form</a></li>
    <li><a href="#Feedback">Feedback Form</a></li>
    <li><a href="#Reports">Inventory Reports</a></li>
+   <li><a href="#Firmware">Firmware Search</a></li>
+   <li><a href="#Location">Location Settings</a></li>
   </ul>
  </div>
 </div>
-</div>
+	
 
 
 
 <!-- Home Page  -->
   <div class="logo"><img src="images/linventory.jpg" width="218" height="45" alt=""/></div>
+  <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
+  <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+ 
   <div data-role="header">  
   <a href="#myPanel" data-icon="home" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open Navigation Panel</a>  
+
     <h1>Inventory Application</h1>     
   </div>
+
   <div data-role="main" class="ui-content" data-theme="b">
     <p></p>
 
  <h2>This inventory management app is designed to help manage orders, inventory and sales on a mobile device. It does not currently integrate with other services or software, but you can export the database and potentially view data from this app in a spreadsheet or similar tool.</h2>
 	<h3>The ZV Inventory smartphone app is available for iPhone, Android and BlackBerry devices.<h3>
   </div>
-  
-  
-           <a href="#Receive" data-theme="b" >
-        <img src="images/box.png" width="26" height="26">
-        <br/>
-        Receive
-</a>
+
   <div data-role="footer">
     <h1>Zvrubliauskas &copy; 2016</h1>
   </div>
@@ -62,6 +201,7 @@
 <div id="Receive" data-role="page" data-theme="b"  autocomplete="on">
 	<div data-role="header" data-theme="b">
 	  <h1>Receive New Item to Inventory</h1>
+   
       <a href="#pageone" data-role="button" data-transition="slideup" data-icon="back">Back</a> 
 	</div>   
 
@@ -96,24 +236,22 @@
                      <tr>
                         <td width="100"> </td>
                         <td>
-                           <input name="add" type="submit" id="add" value="Add Item to Inventory">
+                           <a href="#Receive_Confirm" type="button" onclick="show()" data-role="button" data-transition="flow" data-icon="back">Submit</a>
+                           
+                           
+                           
                         </td>
                      </tr>
 
                   </table>
                </form>
-	</div>
+
 <!-- End Receive Form -->
-<a href="#Receive_Confirm" data-role="button" data-transition="flow" data-icon="back">Submit</a>     
-      </form>
-	  
+<!-- <input name="add" href="#Receive_Confirm" type="submit" id="add" value="Add Item to Inventory">      -->
       
- 
-      
-	</div>
-	<div data-role="footer" data-theme="b">
-	  <h4>Zvrubliauskas &copy; 2016 </h4>
-	</div>
+								<div data-role="footer" data-theme="b">
+									<h4>Zvrubliauskas &copy; 2016 </h4>
+								</div>
 </div>
 
 
@@ -133,20 +271,24 @@
 
 
 <!-- Stock Search Page  -->
-<div id="Stock Search" data-role="page" data-theme="b">
-	<div data-role="header" data-theme="b">
-		<h1>Search</h1><a href="#pageone" data-role="button" data-transition="fade" data-icon="back">Back</a> 
-	</div>
-	<div data-role="content">	
-	  <h3>Searches all of the database for products that have been entered. </h3>	
-	 <form>
-   
-         <a href="search.php" data-role="button" data-transition="fade" action="search.php" data-icon="search">Search</a>
-     </form>
-      </div>
+<div id="Stock_Search" data-role="page" data-theme="b">
+	
+				<div data-role="header" data-theme="b">
+					<h1>Search</h1><a href="#pageone" data-role="button" data-transition="fade" data-icon="back">Back</a> 
+				</div>
+	
+	
+				<div data-role="content">	
+					<h3>Searches all of the database for products that have been entered. </h3>	
+
+					
+							 <a href="search.php" data-role="button" data-transition="fade" data-icon="search">Search</a>
+
+				</div>
 	<div data-role="footer" data-theme="b">
 	  <h4>Zvrubliauskas &copy; 2016</h4>
 	</div>
+	
 </div>
 
 
@@ -164,7 +306,7 @@
 	<div data-role="footer" data-theme="b">
 	  <h4>Zvrubliauskas &copy; 2016</h4>
 	</div>
-</div>
+		</div>
 
 
 <!-- Feedback Page  -->
@@ -288,9 +430,93 @@
 	</div>
 </div>
 
+<!-- Firmware Search Page  -->
+<div id="Firmware" data-role="page" data-theme="b">
+	
+				<div data-role="header" data-theme="b">
+					<h1>Search</h1><a href="#pageone" data-role="button" data-transition="fade" data-icon="back">Back</a> 
+				</div>
+	
+	
+				<div data-role="content">	
+					<h3>Searches all inventory for products and matching firmware. If product is not in inventory there will be no records displayed.  </h3>	
+
+					
+							 <a href="firmware_search.php" data-role="button" data-transition="fade" data-icon="search">Search</a>
+
+				</div>
+	<div data-role="footer" data-theme="b">
+	  <h4>Zvrubliauskas &copy; 2016</h4>
+	</div>
+	
+</div>
+
+
+<!-- Location Settings  -->
+<div id="Location" data-role="page" data-theme="b">
+	
+				<div data-role="header" data-theme="b">
+					<h1>Location Settings</h1><a href="#pageone" data-role="button" data-transition="fade" data-icon="back">Back</a> 
+				</div>
+	
+	
+				<div data-role="content">	
+					<h3>Settings for Real-Time Location</h3>	
+  <form>            
+        <div data-role="fieldcontain">
+          <label for="selectmenu" class="select">Location Services:</label>
+          <select name="selectmenu" id="selectmenu">
+            <option value="option1">Enabled</option>
+            <option value="option2">Disabled</option>
+          </select
+          
+ 
+
+          <!<div mmTranslatedValue="transId=%22checkbox2%22" data-role="fieldcontain">
+          <fieldset data-role="controlgroup">
+            <legend>Refresh Settings</legend>
+            <input type="checkbox" name="checkbox2" id="checkbox2_0" class="custom" value="" />
+            <label for="checkbox2_0">15 seconds</label>
+            <input type="checkbox" name="checkbox2" id="checkbox2_1" class="custom" value="" />
+            <label for="checkbox2_1">30 seconds</label>
+            <input type="checkbox" name="checkbox2" id="checkbox2_2" class="custom" value="" />
+            <label for="checkbox2_2">60 seconds</label>
+          </fieldset>
+        </div>
+       <!-- End Location Settings Form --> 
+       
+      </form>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 41.641141, lng: -88.447295};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN--HBHmbZL4VYaAvO7L452g0RkwuSb8o&callback=initMap">
+    </script>
 
 
 
+							 <a  data-role="button" data-transition="fade" data-icon="carat-d">Save Changes</a>
+               <a  data-role="button" data-transition="fade" data-icon="delete">Discard Changes</a>
+               <a  data-role="button" data-transition="fade" data-icon="recycle">Restore to Defaults</a>
+
+				</div>
+	<div data-role="footer" data-theme="b">
+	  <h4>Zvrubliauskas &copy; 2016</h4>
+	</div>
+	
+</div>
 
 
 
